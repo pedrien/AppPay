@@ -6,7 +6,7 @@
   --colorTitre: #0a152f;
   --bgFond: #f8f8f8;
   --bgCard: #fff;
-  --colorMuted: #8c95aa;
+  --colorMuted: #697288;
   --colorBorder: #dee2eb;
   --colorBorderTr: #ebeef5;
   --redColor: #df5656;
@@ -15,6 +15,9 @@
   --boxShadowCard: 0 5px 18px rgba(179, 187, 204, 0.05);
   --boxShadowDropdown: rgba(179, 187, 204, 0.1) 0px 5px 24px 0px;
   --borderNone: none;
+  --bgBadgeSuccess: #c1eae2;
+  --bgBadgeDanger: #f7c0c0;
+  --bgBadgeWarning: #f7e2c8;
 
   // Variables for borderRadius //
 
@@ -68,9 +71,30 @@ body {
   min-height: 100vh;
 }
 
+.bg-primary {
+  background-color: var(--primaryColor)!important;
+}
+
 .wrapper {
   min-height: 100vh;
   background: var(--bgFond);
+}
+
+.btn {
+  font-size: var(--fnt-14);
+  border-radius: var(--borderRadius-8);
+  &.btn-default {
+    padding: 8px 12px;
+  }
+  &.btn-primary {
+    background: var(--primaryColor);
+    border-color: var(--primaryColor);
+  }
+  &.btn-white {
+    background: var(--bgCard);
+    color: var(--colorTitre);
+    border-color: var(--bgCard);
+  }
 }
 a {
   text-decoration: none;
@@ -222,10 +246,11 @@ hr {
       &::before {
         content: "";
         position: absolute;
-        width: 100%;
+        width: 50%;
         height: 3px;
         background: var(--primaryColor);
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: -14px;
         border-radius: var(--borderRadius-6);
         display: none;
@@ -380,22 +405,14 @@ hr {
     background: #ffffff2b;
     border: 1px solid #ffffff2b;
 
-    &:hover {
-      
-    }
-
     .icon-arrow {
-      font-size: var(--fnt-14);
       color: var(--whiteLight);
       font-size: var(--fnt-12);
       transition: .3s;
     }
   }
 }
-élément {
-  min-height: 229.7px;
 
-}
 #kt_apexcharts_2 {
   width: 100%;
   max-width: 320px;
@@ -427,7 +444,22 @@ hr {
 .banner-home {
   padding: 40px 0;
   padding-bottom: 80px;
+  position: relative;
   background: var(--darkenBlue);
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(-35deg, var(--primaryColor), var(--orangeColor));
+    border-radius: var(--borderRadius-r-100);
+   pointer-events: none;
+   right: -150px;
+   top: -490px;
+   filter: blur(100px);
+   opacity: .7;
+  }
 
   h1 {
     font-size: var(--fnt-34);
@@ -533,17 +565,33 @@ hr {
   font-weight: 500;
   border-radius: var(--borderRadius-8);
   &.badge-success {
-    background: var(--greenColor);
+    background: var(--bgBadgeSuccess);
+    color: var(--greenColor);
   }
   &.badge-danger {
-    background: var(--redColor);
+    background: var(--bgBadgeDanger);
+    color: var(--redColor);
   }
   &.bagde-warning {
-    background: var(--orangeColor);
+    background: var(--bgBadgeWarning);
+    color: var(--orangeColor);
   }
   &.bagde-light {
     background: var(--bgFond);
     color: var(--colorTitre);
+  }
+}
+
+.all-items {
+  .item {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--colorBorder);
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--borderRadius-12);
+      overflow: hidden;
+    }
   }
 }
 
@@ -670,6 +718,9 @@ hr {
     background: var(--bgCard);
     padding: 14px;
     box-shadow: var(--boxShadowCard);
+    &.rounded-sm {
+      border-radius: var(--borderRadius-12);
+    }
   }
   &.lg {
     padding: 16px;
