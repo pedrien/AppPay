@@ -199,7 +199,13 @@ hr {
     color: var(--colorMuted);
   }
 }
-
+.progress {
+  border-radius: var(--borderRadius-8);
+  background: var(--bgFond);
+  .progress-bar {
+    background: var(--primaryColor);
+  }
+}
 .navbar {
   background: var(--darkenBlue);
   padding: 10px 0;
