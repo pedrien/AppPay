@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="global-div">
+      <div class="wrapper d-flex flex-column">
+        <header class="sticky-top">
+          <nav class="navbar navbar-expand-lg">
+            <div class="content-nav w-100">
+              <div class="container-fluid px-lg-3 px-xl-4 px-xxl-5">
+                <div class="row g-lg-3 g-1 align-items-center">
+                  <div class="col-lg-7">
+                    <div class="d-flex align-items-center gap-lg-5 gap-3">
+                      <a
+                        href="index.html"
+                        class="logo-app d-flex align-items-center gap-2"
+                      >
+                        <div class="icon">
+                          <span class="ms-1"></span>
+                        </div>
+                        UnoPay
+                      </a>
+                      <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                      >
+                        <ul class="navbar-nav ms-lg-5 mb-0 mb-lg-0 gap-lg-4">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                              Tableau de bord
+                              <div
+                                class="icon-arrow d-flex align-items-center ms-2"
+                              >
+                                <i class="fi fi-rr-angle-down icon-arrow"></i>
+                              </div>
+                            </a>
+                            <div class="dropdown">
+                              <div class="content-dropdown">
+                                <ul class="mb-0 ps-0">
+                                  <li>
+                                    <a
+                                      href="#"
+                                      class="d-inline-flex align-items-center gap-2 active"
+                                    >
+                                      <i class="fi fi-rr-apps"></i>
+                                      Overwiew
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      href="#"
+                                      class="d-inline-flex align-items-center gap-2"
+                                    >
+                                      <i class="fi fi-rr-chart-area"></i>
+                                      Analyse
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      href="#"
+                                      class="d-inline-flex align-items-center gap-2"
+                                    >
+                                      <i class="fi fi-rr-bell"></i>
+                                      Notifications
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Payements </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Documentation</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Paramètres </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5">
+                    <div
+                      class="d-flex align-items-center justify-content-end gap-lg-3"
+                    >
+                      <div class="toggle-theme">
+                        <div class="content-theme d-flex align-items-center">
+                          <input
+                            type="checkbox"
+                            id="checkTheme"
+                            name="theme"
+                            class="d-none"
+                          />
+                          <label for="checkTheme" class="label-theme">
+                            <div class="bubble-icon">
+                              <i class="fi fi-rr-sun"></i>
+                              <i class="fi fi-rr-moon"></i>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div
+                        class="block-show-name-project d-flex align-items-center gap-2"
+                      >
+                        <span class="ms-1">Aucun projet</span>
+                        <span>|</span>
+                        <a href="" class="btn-add-project">
+                          <i class="fi fi-rr-plus"></i>
+                        </a>
+                      </div>
+                      <div class="dropdown">
+                        <div
+                          class="block-avatar-user-connected d-flex align-items-center gap-2"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <div class="avatar">
+                            <div class="icon-avatar">P</div>
+                            <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                          </div>
+                          <i class="fi fi-rr-angle-down icon-arrow"></i>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end lg">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar">
+                              <div class="icon-avatar">P</div>
+                              <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                            </div>
+                            <div class="info-user">
+                              <h6 class="mb-0 text sm">Pedrien Kinkani</h6>
+                              <p class="text sm muted mb-0">Super admin</p>
+                            </div>
+                          </div>
+
+                          <hr class="my-2" />
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center gap-2"
+                              href="/profil"
+                            >
+                              <i class="fi fi-rr-user"></i>
+                              Profil
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center gap-2"
+                              href="/parametres"
+                            >
+                              <i class="fi fi-rr-settings"></i>
+                              Parametres
+                            </a>
+                          </li>
+                          <li class="li-border">
+                            <a
+                              class="dropdown-item d-flex align-items-center gap-2"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modalDeconnexion"
+                            >
+                              <i class="fi fi-rr-sign-out-alt"></i>
+                              Deconnexion
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="content-page flex-grow-1 pb-lg-3">
+          <div class="banner-home">
+            <div class="container-fluid px-lg-3 px-xl-4 px-xxl-5">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h1>Salut, Pedrien !</h1>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Soluta quidem voluptatem ipsam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-mt-negative">
+            <div class="container-fluid px-lg-3 px-xl-4 px-xxl-5">
+              <div class="row g-lg-3 g-2">
+                <div class="col-lg-4 col-xxl-3">
+                  <div class="card card-dash sm h-100">
+                    <div class="d-flex align-items-center mb-lg-5 mb-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="icon-widget green">
+                          <i class="fi fi-rr-piggy-bank"></i>
+                        </div>
+                        <p class="mb-0 text">Balance</p>
+                      </div>
+                      <div class="indice-pourcentage ms-auto green">
+                        +2.5%
+                        <i class="fi fi-rr-arrow-up"></i>
+                      </div>
+                    </div>
+                    <div class="row g-2 align-items-center">
+                      <div class="col-6 border-end">
+                        <h4 class="text md mb-0">0,00 $</h4>
+                      </div>
+                      <div class="col-6">
+                        <h4 class="text text-end md mb-0">0,00 CDF</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-xxl-9">
+                  <div class="card card-dash sm h-100">
+                    <div class="row g-2 g-lg-3 g-xl-4">
+                      <div class="col-lg-3 border-end">
+                        <div class="d-flex align-items-center mb-lg-5 mb-3">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="icon-widget sm">
+                              <img
+                                src="images/logoMpesa.jpg"
+                                alt="mpesa"
+                                class="w-100 h-100 object-fit-cover"
+                              />
+                            </div>
+                            <p class="mb-0 text sm">Mpesa</p>
+                          </div>
+                          <div class="indice-pourcentage ms-auto red">
+                            -2.5%
+                            <i class="fi fi-rr-arrow-down"></i>
+                          </div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                          <div class="col-6 border-end">
+                            <h4 class="text mb-0">0,00 $</h4>
+                          </div>
+                          <div class="col-6">
+                            <h4 class="text text-end mb-0">0,00 CDF</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 border-end">
+                        <div class="d-flex align-items-center mb-lg-5 mb-3">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="icon-widget green sm">
+                              <img
+                                src="images/orangemoney.jpg"
+                                alt="orangemoney"
+                                class="w-100 h-100 object-fit-cover"
+                              />
+                            </div>
+                            <p class="mb-0 text sm">OrangeMoney</p>
+                          </div>
+                          <div class="indice-pourcentage ms-auto green">
+                            +2.5%
+                            <i class="fi fi-rr-arrow-up"></i>
+                          </div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                          <div class="col-6 border-end">
+                            <h4 class="text mb-0">0,00 $</h4>
+                          </div>
+                          <div class="col-6">
+                            <h4 class="text text-end mb-0">0,00 CDF</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 border-end">
+                        <div class="d-flex align-items-center mb-lg-5 mb-3">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="icon-widget green sm">
+                              <img
+                                src="images/AIRTELLOGO.png"
+                                alt="airtemoney"
+                                class="w-100 h-100 object-fit-cover"
+                              />
+                            </div>
+                            <p class="mb-0 text sm">AirtelMoney</p>
+                          </div>
+                          <div class="indice-pourcentage ms-auto red">
+                            -2.5%
+                            <i class="fi fi-rr-arrow-down"></i>
+                          </div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                          <div class="col-6 border-end">
+                            <h4 class="text mb-0">0,00 $</h4>
+                          </div>
+                          <div class="col-6">
+                            <h4 class="text text-end mb-0">0,00 CDF</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="d-flex align-items-center mb-lg-5 mb-3">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="icon-widget green sm">
+                              <img
+                                src="images/logoAfrimoney.jpg"
+                                alt="afrimoney"
+                                class="w-100 h-100 object-fit-cover"
+                              />
+                            </div>
+                            <p class="mb-0 text sm">AfriMoney</p>
+                          </div>
+                          <div class="indice-pourcentage ms-auto green">
+                            +2.5%
+                            <i class="fi fi-rr-arrow-up"></i>
+                          </div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                          <div class="col-6 border-end">
+                            <h4 class="text mb-0">0,00 $</h4>
+                          </div>
+                          <div class="col-6">
+                            <h4 class="text text-end mb-0">0,00 CDF</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-xxl-9">
+                  <div class="card card-dash lg h-100">
+                    <div class="row g-lg-3 g-2 align-items-center">
+                      <div class="col-lg-8">
+                        <h4 class="text mb-0">Statistque de payements</h4>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="d-flex align-items-center gap-lg-2 gap-1">
+                          <div class="d-flex align-items-center ms-lg-auto">
+                            <ul
+                              class="mb-0 nav nav-tabs nav-white"
+                              id="myTab"
+                              role="tablist"
+                            >
+                              <li class="nav-item" role="presentation">
+                                <a href="#" class="nav-link"> Semaine </a>
+                              </li>
+
+                              <li class="nav-item" role="presentation">
+                                <a href="#" class="nav-link"> Mois </a>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <a href="#" class="nav-link active"> Année </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div
+                          id="kt_apexcharts_1"
+                          class="kt_apexchart kt_apexcharts_1 px-2"
+                          style="height: auto"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xxl-3">
+                  <div class="card card-dash lg h-100">
+                    <div class="row g-lg-3 g-2 align-items-center mb-lg-4">
+                      <div class="col-lg-8">
+                        <h4 class="text mb-0">Taux de payements</h4>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex flex-column flex-grow-1 align-items-center"
+                    >
+                      <div id="kt_apexcharts_2"></div>
+                    </div>
+                    <div class="row g-2 g-lg-2 g-xl-4 mt-lg-2">
+                      <div class="col-6">
+                        <div class="d-flex align-items-center gap-1">
+                         <div class="d-flex align-items-center gap-1">
+                          <div class="bubble-legend green"></div>
+                          <span class="text sm">Réussi</span>
+                         </div>
+                          <span class="ms-auto text sm muted">17</span>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="d-flex align-items-center gap-1">
+                          <div class="d-flex align-items-center gap-1">
+                            <div class="bubble-legend red"></div>
+                            <span class="text sm">Echoué</span>
+                           </div>
+                          <span class="ms-auto text sm muted">17</span>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="d-flex align-items-center gap-1">
+                          <div class="d-flex align-items-center gap-1">
+                            <div class="bubble-legend orange"></div>
+                            <span class="text sm">En process</span>
+                           </div>
+                          <span class="ms-auto text sm muted">17</span>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="d-flex align-items-center gap-1">
+                          <div class="d-flex align-items-center gap-1">
+                            <div class="bubble-legend gray"></div>
+                            <span class="text sm">Annulé</span>
+                           </div>
+                          <span class="ms-auto text sm muted">17</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-xxl-4">
+                  <div class="card card-dash h-100"></div>
+                </div>
+                <div class="col-lg-7 col-xxl-8">
+                  <div class="card card-dash lg">
+                    <div class="row g-lg-3 g-2 align-items-center">
+                      <div class="col-lg-8">
+                        <h4 class="text mb-0">Payement recents</h4>
+                        <p class="mb-0 text sm muted">
+                          You made 2 sales this month
+                        </p>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="d-flex align-items-center gap-lg-2 gap-1">
+                          <div class="d-flex align-items-center ms-lg-auto">
+                            <ul
+                              class="mb-0 nav nav-tabs nav-white"
+                              id="myTab"
+                              role="tablist"
+                            >
+                              <li class="nav-item" role="presentation">
+                                <a href="#" class="nav-link active">
+                                  Semaine
+                                </a>
+                              </li>
+
+                              <li class="nav-item" role="presentation">
+                                <a href="#" class="nav-link"> Mois </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="mb-1" />
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Nom client</th>
+                            <th>Montant</th>
+                            <th>Moyen de payement</th>
+                            <th>Statut</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <div class="d-flex align-items-center gap-2">
+                                <div class="avatar md">
+                                  <div class="icon-avatar">P</div>
+                                  <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                                </div>
+                                <div>
+                                  <h6 class="text sm mb-0">Pedrien Kinkani</h6>
+                                  <p class="mb-0 text xm muted">
+                                    +243810678167
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>20.00$</td>
+                            <td>Mpesa</td>
+                            <td>
+                              <div class="badge badge-success">
+                                <i class="fi fi-rr-check"></i>
+                                Réussi
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>
+                              <div class="d-flex align-items-center gap-2">
+                                <div class="avatar md">
+                                  <div class="icon-avatar">P</div>
+                                  <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                                </div>
+                                <div>
+                                  <h6 class="text sm mb-0">Pedrien Kinkani</h6>
+                                  <p class="mb-0 text xm muted">
+                                    +243810678167
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>20.00$</td>
+                            <td>Orangemoney</td>
+                            <td>
+                              <div class="badge badge-danger">
+                                <i class="fi fi-rr-cross-small"></i>
+                                Echoué
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>
+                              <div class="d-flex align-items-center gap-2">
+                                <div class="avatar md">
+                                  <div class="icon-avatar">P</div>
+                                  <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                                </div>
+                                <div>
+                                  <h6 class="text sm mb-0">Pedrien Kinkani</h6>
+                                  <p class="mb-0 text xm muted">
+                                    +243810678167
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>20.00$</td>
+                            <td>Airtelmoney</td>
+                            <td>
+                              <div class="badge bagde-warning">
+                                <i class="fi fi-rr-clock"></i>
+                                En process
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>
+                              <div class="d-flex align-items-center gap-2">
+                                <div class="avatar md">
+                                  <div class="icon-avatar">P</div>
+                                  <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                                </div>
+                                <div>
+                                  <h6 class="text sm mb-0">Pedrien Kinkani</h6>
+                                  <p class="mb-0 text xm muted">
+                                    +243810678167
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>20.00$</td>
+                            <td>Afrimoney</td>
+                            <td>
+                              <div class="badge bagde-light">
+                                <i class="fi fi-rr-cross-small"></i>
+                                Annulé
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script>
+      var options = {
+        series: [
+          {
+            name: "Mpesa",
+            data: [31, 40, 28, 51, 42, 109, 100, 38, 55, 77, 90, 102],
+          },
+          {
+            name: "OrangeMoney",
+            data: [20, 23, 68, 71, 92, 110, 50, 38, 25, 97, 170, 180],
+          },
+
+          {
+            name: "AirtelMoney",
+            data: [20, 203, 28, 67, 45, 40, 50, 38, 65, 97, 200, 180],
+          },
+
+          {
+            name: "AfriMoney",
+            data: [100, 3, 18, 287, 45, 18, 500, 108, 65, 57, 150, 380],
+          },
+        ],
+        colors: ["#92bf7f", "#f5a870", "#f1686d", "#bf64a2"],
+        chart: {
+          height: 350,
+          type: "area",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: "smooth",
+        },
+        xaxis: {
+          //   type: 'datetime',
+          categories: [
+            "Janv",
+            "Fev",
+            "Mars",
+            "Avril",
+            "Mai",
+            "Juin",
+            "Juil",
+            "Aout",
+            "Sept",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+        },
+        stroke: {
+          show: true,
+          width: 3,
+          colors: ["transparent"],
+        },
+      };
+
+      var chart1 = new ApexCharts(
+        document.querySelector("#kt_apexcharts_1"),
+        options
+      );
+      chart1.render();
+
+      var options = {
+        series: [17, 15, 26, 34],
+        chart: {
+          type: "donut",
+          height: window.innerWidth < 768 ? 250 : 300,
+        },
+        // stroke: {
+        //   lineCap: "round",
+        // },
+        labels: [
+          "P. Morales",
+          "G.P. Morales",
+          "P. Physique",
+          "G.P. Physiques",
+          "Immobilières",
+        ],
+        legend: {
+          position: window.innerWidth < 768 ? "bottom" : "right", // Déplace la légende
+          show: false,
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          lineCap: "round",
+          curve: "smooth",
+        }, // Labels pour chaque partie du donut
+        colors: ["#44b6a1", "#df5656", "#dfa356", "#f8f8f8"], // Bleu pour actifs, rouge pour inactifs
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+
+        plotOptions: {
+          pie: {
+            donut: {
+              size: "88%", // Diminuer l'épaisseur du donut
+            },
+          },
+        },
+      };
+
+      var chart2 = new ApexCharts(
+        document.querySelector("#kt_apexcharts_2"),
+        options
+      );
+      chart2.render();
+    </script>
+  </body>
+</html>
