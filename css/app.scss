@@ -1,5 +1,5 @@
 :root {
-  --primaryColor: #44b6a1;
+  --primaryColor: #9a6bf0;
   --whiteColor: #fff;
   --whiteLight: #d8e4e8;
   --darkenBlue: #0a152f;
@@ -483,7 +483,7 @@ hr {
   font-size: var(--fnt-12);
   color: var(--colorMuted);
   &.green {
-    color: var(--primaryColor);
+    color: var(--greenColor);
   }
   &.red {
     color: var(--redColor);
