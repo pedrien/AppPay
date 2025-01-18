@@ -484,7 +484,7 @@ hr {
 }
 
 .indice-pourcentage {
-  font-size: var(--fnt-14);
+  font-size: var(--fnt-12);
   color: var(--colorMuted);
   &.green {
     color: var(--primaryColor);
@@ -834,4 +834,9 @@ hr {
       border-color: var(--primaryColor);
     }
   }
+}
+
+footer {
+  padding: 14px 0;
+  background: var(--bgCard);
 }

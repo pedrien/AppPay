@@ -430,7 +430,7 @@ hr {
 }
 
 .indice-pourcentage {
-  font-size: var(--fnt-14);
+  font-size: var(--fnt-12);
   color: var(--colorMuted);
 }
 .indice-pourcentage.green {
@@ -720,4 +720,9 @@ hr {
 }
 .form-control.form-border:focus {
   border-color: var(--primaryColor);
+}
+
+footer {
+  padding: 14px 0;
+  background: var(--bgCard);
 }/*# sourceMappingURL=app.css.map */
