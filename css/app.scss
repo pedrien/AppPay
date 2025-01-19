@@ -83,6 +83,7 @@ body {
 .btn {
   font-size: var(--fnt-14);
   border-radius: var(--borderRadius-8);
+  transition: var(--transition-3);
   &.btn-default {
     padding: 8px 12px;
   }
@@ -94,6 +95,12 @@ body {
     background: var(--bgCard);
     color: var(--colorTitre);
     border-color: var(--bgCard);
+  }
+  &.btn-border {
+    border: 1px solid var(--colorBorder);
+    &:hover {
+      border-color: var(--colorTitre);
+    }
   }
 }
 a {
@@ -174,6 +181,7 @@ a {
     }
   }
 }
+
 .border-end {
   border-color: var(--colorBorder)!important;
 }
@@ -376,7 +384,7 @@ hr {
 
   .block-show-name-project {
     color: var(--whiteColor);
-    font-size: var(--fnt-14);
+    font-size: var(--fnt-12);
     padding: 4px;
     line-height: 100%;
     border: 1px solid #ffffff54;
@@ -452,19 +460,20 @@ hr {
   position: relative;
   background: var(--darkenBlue);
   overflow: hidden;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(-35deg, var(--primaryColor), var(--orangeColor));
-    border-radius: var(--borderRadius-r-100);
-   pointer-events: none;
-   right: -150px;
-   top: -490px;
-   filter: blur(100px);
-   opacity: .7;
-  }
+  border-radius: 0 0 var(--borderRadius-24) var(--borderRadius-24);
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 500px;
+  //   height: 500px;
+  //   background: linear-gradient(-35deg, var(--primaryColor), var(--orangeColor));
+  //   border-radius: var(--borderRadius-r-100);
+  //  pointer-events: none;
+  //  right: -150px;
+  //  top: -490px;
+  //  filter: blur(100px);
+  //  opacity: .7;
+  // }
 
   h1 {
     font-size: var(--fnt-34);
@@ -555,7 +564,7 @@ hr {
       background: var(--bgBtnLight);
 
       &:hover {
-          color: var(--colorTitle);
+          color: var(--colorTitre);
       }
 
   }
@@ -605,7 +614,7 @@ hr {
   display: none !important;
 }
 .apexcharts-legend-text {
-  color: var(--colorTitle) !important;
+  color: var(--colorTitre) !important;
 }
 .apexcharts-pie-area {
   stroke-width: 0 !important;
@@ -691,14 +700,14 @@ hr {
     border-bottom: 1px solid var(--colorBorder) !important;
   }
   .apexcharts-tooltip-title {
-    color: var(--colorTitle) !important;
+    color: var(--colorTitre) !important;
   }
   .apexcharts-tooltip-text {
     .apexcharts-tooltip-text-y-label {
       color: var(--colorParagraph);
     }
     .apexcharts-tooltip-text-y-value {
-      color: var(--colorTitle);
+      color: var(--colorTitre);
     }
   }
 }
@@ -774,7 +783,7 @@ hr {
   align-items: center;
   .icon {
     position: absolute;
-    color: var(--colorTitle);
+    color: var(--colorTitre);
     left: 14px;
     font-size: var(--fnt-14);
     transition: var(--transition-3);
@@ -822,7 +831,7 @@ hr {
   border-radius: var(--borderRadius-8);
   box-shadow: none !important;
   font-size: 14px;
-  color: var(--colorTitle) !important;
+  color: var(--colorTitre) !important;
   transition: var(--transition-3);
   &.form-border {
     border-color: var(--colorBorder);
@@ -836,4 +845,150 @@ hr {
 footer {
   padding: 14px 0;
   background: var(--bgCard);
+}
+
+.block-login {
+  min-height: 100vh;
+  background: var(--bgFond);
+  .block-bg-login {
+    height: 100vh;
+  }
+  .content-bg {
+    width: 96%;
+    height: 96%;
+    background: var(--darkenBlue);
+    border-radius: var(--borderRadius-24);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: radial-gradient(circle at 50%,transparent, #0a152fea);
+    }
+
+    .text-xxl {
+      font-size: 48px;
+      span {
+        color: var(--primaryColor);
+        font-weight: var(--fw-700);
+      }
+    }
+    .text-para {
+      color: var(--whiteLight);
+      width: 420px;
+    }
+
+    .block-circles {
+      position: absolute;
+      width: 1150px;
+      height: 1150px;
+      border-radius: 100%;
+      border: 2px solid #ffffff1f;
+      opacity: .5;
+      z-index: -2;
+      &:first-child {
+        top: -300px;
+        left: -300px;
+      }
+      &:last-child {
+        bottom: -300px;
+        right: -300px;
+      }
+      .circle {
+        position: absolute;
+        border: 2px solid #ffffff1f;
+        border-radius: 100%;
+        &:first-child {
+          inset: 50px;
+          
+        }
+        &:nth-child(2) {
+          inset: 100px;
+        }
+        &:nth-child(3) {
+          inset: 150px;
+        }
+        &:nth-child(4) {
+          inset: 200px;
+        }
+        &:nth-child(5) {
+          inset: 250px;
+        }
+      }
+    }
+    .block-img {
+      position: relative;
+      .img-1 {
+        overflow: hidden;
+        border-radius: 18px;
+        width: 90%;
+        box-shadow: var(--boxShadowDropdown);
+      }
+      .img-2 {
+        position: absolute;
+        width: 22%;
+        border-radius: 14px;
+        overflow: hidden;
+        top: -100px;
+        right: 50px;
+        box-shadow: var(--boxShadowDropdown);
+      }
+    }
+  }
+
+  .card-login {
+    padding: 34px;
+    border: var(--borderNone);
+    border-radius: var(--borderRadius-24);
+    box-shadow: var(--boxShadowCard);
+    .link {
+      color: var(--primaryColor);
+      font-size: var(--fnt-14);
+      font-weight: var(--fw-600);
+      transition: var(--transition-3);
+      &.text {
+        color: var(--colorTitre);
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+    }
+    h1 {
+      color: var(--colorTitre);
+      font-size: var(--fnt-30);
+      font-weight: var(--fw-600);
+    }
+    .icon-input {
+      position: absolute;
+      width: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      background: var(--bgCard);
+      right: 10px;
+      cursor: pointer;
+      color: var(--colorTitre);
+    }
+
+    .form-control {
+      height: 48px;
+      border-radius: 14px;
+      padding-left: 18px;
+      &::placeholder {
+        color: var(--colorTitre);
+      }
+    }
+    .btn-lg {
+      height: 48px;
+      border-radius: 14px;
+      .img-logo {
+        width: 20px;
+      }
+    }
+  }
 }
