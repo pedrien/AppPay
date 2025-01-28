@@ -19,6 +19,7 @@
   --bgBadgeSuccess: #c1eae2;
   --bgBadgeDanger: #f7c0c0;
   --bgBadgeWarning: #f7e2c8;
+  --bgBtnLight: #f8f8f8;
   --borderRadius-6: 6px;
   --borderRadius-8: 8px;
   --borderRadius-12: 12px;
@@ -66,6 +67,50 @@ body {
 .wrapper {
   min-height: 100vh;
   background: var(--bgFond);
+}
+
+.tooltip-indicator {
+  position: absolute;
+  padding: 7px 14px;
+  border-radius: var(--borderRadius-8);
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--whiteColor);
+  font-size: var(--fnt-12);
+  transition: var(--transition-3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 100;
+}
+.tooltip-indicator.sm {
+  padding: 2px 8px;
+}
+
+.tooltip-hover {
+  display: inline-flex;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative;
+}
+.tooltip-hover:hover .tooltip-indicator {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip-hover[data-position-tooltip=top] .tooltip-indicator {
+  bottom: 160%;
+}
+.tooltip-hover[data-position-tooltip=top] .tooltip-indicator.sm {
+  bottom: 110%;
+}
+.tooltip-hover[data-position-tooltip=bottom] .tooltip-indicator {
+  top: 160%;
+}
+.tooltip-hover[data-position-tooltip=left] .tooltip-indicator {
+  left: 160%;
+}
+.tooltip-hover[data-position-tooltip=right] .tooltip-indicator {
+  right: 160%;
 }
 
 .btn {
@@ -181,6 +226,9 @@ hr {
 }
 .text.xm {
   font-size: var(--fnt-12);
+}
+.text.fnt-18 {
+  font-size: var(--fnt-18);
 }
 .text.md {
   font-size: var(--fnt-20);
@@ -472,8 +520,8 @@ hr {
   background: transparent;
 }
 .table .btn-table {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,6 +533,63 @@ hr {
 }
 .table .btn-table:hover {
   color: var(--colorTitre);
+}
+
+.link {
+  color: var(--colorTitre);
+  transition: var(--transition-3);
+  font-weight: var(--fw-500);
+}
+.link:hover {
+  color: var(--primaryColor);
+}
+
+.block-sidebar {
+  position: sticky;
+  height: calc(100vh - 170px);
+  top: 80px;
+  border-right: 1px solid var(--colorBorder);
+}
+.block-sidebar .header {
+  padding: 10px 12px;
+}
+.block-sidebar .body {
+  padding: 10px 12px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.block-sidebar .body .list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.block-sidebar .body .list li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  padding-left: 7px;
+  font-size: var(--fnt-14);
+  color: var(--colorTitre);
+  transition: var(--transition-3);
+  font-weight: var(--fw-500);
+  position: relative;
+}
+.block-sidebar .body .list li a::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 25%;
+  background: var(--primaryColor);
+  left: 0;
+  border-radius: var(--borderRadius-8);
+  display: none;
+}
+.block-sidebar .body .list li a.active, .block-sidebar .body .list li a:hover {
+  color: var(--primaryColor);
+}
+.block-sidebar .body .list li a.active::before {
+  display: block;
 }
 
 .badge {
@@ -647,6 +752,21 @@ hr {
 }
 .card.lg {
   padding: 16px;
+}
+.card.card-code {
+  border: none;
+  border-radius: var(--borderRadius-24);
+  background: #0a152f;
+  padding: 10px;
+}
+.card.card-code .content-card {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1058823529);
+  border: 1px solid rgba(255, 255, 255, 0.1058823529);
+  border-radius: 18px;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 250px;
 }
 
 .block-search-in-table {
