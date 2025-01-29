@@ -123,8 +123,8 @@ body {
   padding: 7px 12px;
 }
 .btn.btn-primary {
-  background: var(--primaryColor);
-  border-color: var(--primaryColor);
+  background: var(--primaryColor) !important;
+  border-color: var(--primaryColor) !important;
 }
 .btn.btn-white {
   background: var(--bgCard);
@@ -458,10 +458,9 @@ hr {
   position: relative;
   background: var(--darkenBlue);
   overflow: hidden;
-  border-radius: 0 0 var(--borderRadius-24) var(--borderRadius-24);
 }
 .banner-home h1 {
-  font-size: var(--fnt-34);
+  font-size: var(--fnt-32);
   color: var(--whiteColor);
 }
 .banner-home p {
@@ -1170,7 +1169,7 @@ footer {
 }
 .modal .modal-title {
   font-size: var(--fnt-16);
-  color: var(--colorTitle);
+  color: var(--colorTitre);
 }
 .modal .modal-content {
   border-radius: var(--borderRadius-24);

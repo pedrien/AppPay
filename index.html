@@ -98,7 +98,7 @@
                       >
                         <span class="ms-1">Aucun projet</span>
                         <span>|</span>
-                        <a href="" class="btn-add-project">
+                        <a href="#" class="btn-add-project" data-bs-toggle="modal" data-bs-target="#modalNewProject">
                           <i class="fi fi-rr-plus"></i>
                         </a>
                       </div>
@@ -197,7 +197,7 @@
                 </div>
                 <div class="col-lg-4">
                   <div class="d-flex align-items-center gap-2 justify-content-lg-end">
-                    <a href="#" class="btn btn-default btn-primary">
+                    <a href="#" class="btn btn-default btn-primary" data-bs-toggle="modal" data-bs-target="#modalNewProject">
                       Nouveau projet
                     </a>
                   </div>
@@ -741,6 +741,260 @@
             </div>
           </div>
         </footer>
+      </div>
+    </div>
+    <div class="modal fade modal-lg" id="modalNewProject" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title mb-0">Créer un projet</h5>
+            <button
+              type="button"
+              class="btn-close tooltip-hover"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              data-position-tooltip="right"
+            >
+              <i class="fi fi-rr-cross"></i>
+              <div class="tooltip-indicator">Fermer</div>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row g-lg-4 g-3">
+                <div class="col-lg-4">
+                  <ul class="list-indicator d-flex flex-lg-column">
+                    <li class="active">Informations</li>
+                    <li>Détails</li>
+                    <li>Configuration</li>
+                    <li>Finalisation</li>
+                  </ul>
+                </div>
+                <div class="col-lg-8">
+                  <div class="col-lg-10 mx-auto">
+                    <div id="info">
+                      <h5 class="text fnt-18">Informations</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Nom
+                            <span class="text muted xm"
+                              >(Nom de votre projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Nom d'affichage
+                            <span class="text muted xm"
+                              >(Nom d'affichage de votre projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="details">
+                      <h5 class="text fnt-18">Détails</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Description
+                            <span class="text muted xm"
+                              >(Une brève description de votre projet)</span
+                            ></label
+                          >
+                          <textarea name="descr" rows="3" id="descr" class="form-control form-border"></textarea>
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2">
+                            Vignette
+                          </label>
+                          <div class="block-upload-file">
+                            <label for="" class="dashed">
+                                <p class="mb-0 d-flex flex-column align-items-center text-center">
+                                    <i class="fi fi-rr-upload icon-upload mb-1"></i>
+                                    <span>Téléchargez une image pour la vignette de votre projet (PNG,JPEG,WEBP)</span>
+                                </p>
+                            </label>
+                            <Input class="d-none" type="file" id="id" accept="image/*"/>
+                        </div>
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                          <button class="btn btn-default btn-light w-50">
+                            Précédent
+                          </button>
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="configuration">
+                      <h5 class="text fnt-18">Configuration</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >URL de rappel
+                            <span class="text muted xm"
+                              >(URL pour le rappel (Callback) du projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="https://exemple.com/callback"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >IP du serveur
+                            <span class="text muted xm"
+                              >(L'adresse IP de votre serveur)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="192.168.1.1"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Nom de domaine
+                            <span class="text muted xm"
+                              >(Nom de domaine de votre projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="https://exemple.com"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                          <button class="btn btn-default btn-light w-50">
+                            Précédent
+                          </button>
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="finalisation">
+                      <h5 class="text fnt-18">Finalisation</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                          >Plan
+                          </label>
+                          <div class="row g-lg-3 g-2">
+                            <div class="col-lg-6">
+                              <div class="card card-plan-sm"> 
+                                <input type="radio" class="radio" name="radio-plan" id="plan-1">
+                                <div class="content-card">
+                                  <div class="fake-radio d-flex align-items-center justify-content-center">
+                                    <i class="fi fi-rr-check"></i>
+                                  </div>
+                                  <h4 class="text mb-lg-4">Standar</h4>
+                                  <div class="d-flex flex-column">
+                                    <h5 class="text fnt-18 mb-1">
+                                      $25
+                                    </h5>
+                                    <p class="text muted xm mb-0">60000CFD</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="card card-plan-sm"> 
+                                <input type="radio" class="radio" name="radio-plan" id="plan-2">
+                                <div class="content-card">
+                                  <div class="fake-radio d-flex align-items-center justify-content-center">
+                                    <i class="fi fi-rr-check"></i>
+                                  </div>
+                                  <h4 class="text mb-lg-4">Standar</h4>
+                                  <div class="d-flex flex-column">
+                                    <h5 class="text fnt-18 mb-1">
+                                      60000CFD
+                                    </h5>
+                                    <p class="text muted xm mb-0">
+                                      $25
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Fournisseur
+                            </label
+                          >
+                          <select name="" id="" class="form-control form-select lg form-border">
+                            <option value="" selected disabled>Choisir un fournisseur</option>
+                          </select>
+                        </div>
+                       
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Numéro de téléphone
+                            <span class="text muted xm"
+                              >(Votre numéro de téléphone)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="https://exemple.com"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                          <button class="btn btn-default btn-light w-50">
+                            Précédent
+                          </button>
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
