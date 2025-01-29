@@ -120,7 +120,7 @@ body {
   transition: var(--transition-3);
 }
 .btn.btn-default {
-  padding: 8px 12px;
+  padding: 7px 12px;
 }
 .btn.btn-primary {
   background: var(--primaryColor);
@@ -745,6 +745,46 @@ hr {
 }
 .card.card-plan .block-circles .circle:nth-child(5) {
   inset: 150px;
+}
+.card.card-plan-sm {
+  border: none;
+  background: var(--bgCard);
+  position: relative;
+  z-index: 1;
+}
+.card.card-plan-sm input.radio {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.card.card-plan-sm input.radio:checked + .content-card {
+  border: 1px dashed var(--primaryColor);
+}
+.card.card-plan-sm input.radio:checked + .content-card .fake-radio {
+  background: var(--primaryColor);
+}
+.card.card-plan-sm .fake-radio {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: var(--bgBtnLight);
+  border-radius: var(--borderRadius-r-100);
+  right: 10px;
+  top: 10px;
+  transition: var(--transition-3);
+  font-size: var(--fnt-10);
+  color: var(--whiteColor);
+}
+.card.card-plan-sm .content-card {
+  border: 1px dashed var(--colorBorder);
+  border-radius: var(--borderRadius-12);
+  transition: border var(--transition-3);
+  padding: 14px;
 }
 .card.card-dash {
   border: none;
