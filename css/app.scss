@@ -972,6 +972,15 @@ hr {
       background: var(--bgCard);
     }
   }
+  &.reverse {
+    background: var(--bgCard);
+    .nav-link {
+      &.active {
+        color: var(--colorTitre);
+        background: var(--bgBtnLight);
+      }
+    }
+  }
 }
 
 .form-control {

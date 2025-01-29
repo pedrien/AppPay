@@ -18,7 +18,9 @@
               <div class="container-fluid px-lg-3 px-lg-3 px-xxl-4">
                 <div class="row g-lg-3 g-1 align-items-center">
                   <div class="col-lg-8">
-                    <div class="d-flex align-items-center gap-lg-3 gap-xxl-5  gap-3">
+                    <div
+                      class="d-flex align-items-center gap-lg-3 gap-xxl-5 gap-3"
+                    >
                       <a
                         href="index.html"
                         class="logo-app d-flex align-items-center gap-2"
@@ -34,7 +36,7 @@
                       >
                         <ul class="navbar-nav ms-lg-5 mb-0 mb-lg-0 gap-lg-4">
                           <li class="nav-item">
-                            <a class="nav-link " href="index.html">
+                            <a class="nav-link" href="index.html">
                               Tableau de bord
                               <div
                                 class="icon-arrow d-flex align-items-center ms-2"
@@ -77,10 +79,14 @@
                             </div>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="payements.html">Payements </a>
+                            <a class="nav-link" href="payements.html"
+                              >Payements
+                            </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="documentation.html">Documentation</a>
+                            <a class="nav-link active" href="documentation.html"
+                              >Documentation</a
+                            >
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#">Paramètres </a>
@@ -118,7 +124,10 @@
                           </label>
                         </div>
                       </div>
-                      <a href="#" class="link-icon d-flex align-items-center justify-content-center">
+                      <a
+                        href="#"
+                        class="link-icon d-flex align-items-center justify-content-center"
+                      >
                         <i class="fi fi-rr-bell-ring"></i>
                       </a>
                       <div class="dropdown">
@@ -191,27 +200,19 @@
                 <div class="col-lg-4 col-xl-3">
                   <div class="block-sidebar d-flex flex-column">
                     <div class="header py-0">
-                      <h4 class="text  mb-0">
-                        Documentation
-                      </h4>
-                      <hr>
+                      <h4 class="text mb-0">Documentation</h4>
+                      <hr />
                     </div>
                     <div class="body flex-grow-1 pt-0">
                       <ul class="list">
                         <li>
-                          <a href="#" class="active">
-                            API
-                          </a>
+                          <a href="#" class="active"> API </a>
                         </li>
                         <li>
-                          <a href="#">
-                            Portail web
-                          </a>
+                          <a href="#"> Portail web </a>
                         </li>
                         <li>
-                          <a href="#">
-                            Callback
-                          </a>
+                          <a href="#"> Callback </a>
                         </li>
                       </ul>
                     </div>
@@ -221,14 +222,14 @@
                   <div class="col-lg-11 col-xl-10 mx-auto">
                     <h1 class="text fnt-18">API</h1>
                     <p class="text sm muted mb-lg-4 mb-3">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit esse accusantium accusamus, facere ex tempore error minus exercitationem ratione sapiente nobis assumenda, <a href="#" class="link text sm">Voir la clé d'API</a>.
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Reprehenderit esse accusantium accusamus, facere ex
+                      tempore error minus exercitationem ratione sapiente nobis
+                      assumenda,
+                      <a href="#" class="link text sm">Voir la clé d'API</a>.
                     </p>
-                    <h2 class="text md">
-                      Initier un paiement
-                    </h2>
-                    <p class="text sm">
-                      Paramètres de la requête (POST)
-                    </p>
+                    <h2 class="text md">Initier un paiement</h2>
+                    <p class="text sm">Paramètres de la requête (POST)</p>
                     <div class="card card-dash lg mb-3">
                       <div class="table-responsive">
                         <table class="table">
@@ -243,25 +244,19 @@
                           <tbody>
                             <tr>
                               <td>Token</td>
-                              <td>
-                                String
-                              </td>
+                              <td>String</td>
                               <td>Oui</td>
                               <td>Token d'authentification</td>
                             </tr>
                             <tr>
                               <td>Provider</td>
-                              <td>
-                                String
-                              </td>
+                              <td>String</td>
                               <td>Oui</td>
                               <td>Nom du fournisseur</td>
                             </tr>
                             <tr>
                               <td>Reference</td>
-                              <td>
-                                String
-                              </td>
+                              <td>String</td>
                               <td>Oui</td>
                               <td>Référence unique de la transaction</td>
                             </tr>
@@ -269,11 +264,754 @@
                         </table>
                       </div>
                     </div>
-                    <div class="card card-code">
+                    <div class="card card-code mb-4">
                       <div class="content-card d-flex">
-                        <p class="text-white">
-                          Afficher le code ici
-                        </p>
+                        <p class="text-white">Afficher le code ici</p>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <ul
+                        class="nav nav-tabs nav-white reverse mb-3"
+                        id="myTab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="pane-1"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-1"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-1"
+                            aria-selected="true"
+                          >
+                            Paramètres de la reponse
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-2"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-2"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-2"
+                            aria-selected="false"
+                          >
+                            Reponse en cas d'erreur
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="tab-pane-1"
+                        role="tabpanel"
+                        aria-labelledby="pane-1"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-4">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="tab-pane-2"
+                        role="tabpanel"
+                        aria-labelledby="pane-2"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-4">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <ul
+                        class="nav nav-tabs nav-white reverse mb-3"
+                        id="myTab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="pane-3"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-python"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-python"
+                            aria-selected="true"
+                          >
+                            Python
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-4"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-php"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-php"
+                            aria-selected="false"
+                          >
+                            PHP
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-5"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-java"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-java"
+                            aria-selected="false"
+                          >
+                            Java
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-6"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-javascript"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-javascript"
+                            aria-selected="false"
+                          >
+                            Javascript
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-7"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-go"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-go"
+                            aria-selected="false"
+                          >
+                            Go
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-8"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-typeScript"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-typeScript"
+                            aria-selected="false"
+                          >
+                            TypeScript
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-9"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-spring"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-spring"
+                            aria-selected="false"
+                          >
+                            Spring
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-10"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-flutter"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-flutter"
+                            aria-selected="false"
+                          >
+                            Flutter
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="tab-pane-python"
+                        role="tabpanel"
+                        aria-labelledby="pane-3"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-4">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="tab-pane-php"
+                        role="tabpanel"
+                        aria-labelledby="pane-4"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-3">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h2 class="text md">Vériefier le statut du paiement</h2>
+                    <p class="text sm">Paramètres de la requête (POST)</p>
+                    <div class="card card-dash lg mb-3">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Nom</th>
+                              <th>Type</th>
+                              <th>Obligation</th>
+                              <th>Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Token</td>
+                              <td>String</td>
+                              <td>Oui</td>
+                              <td>Token d'authentification</td>
+                            </tr>
+                            <tr>
+                              <td>Provider</td>
+                              <td>String</td>
+                              <td>Oui</td>
+                              <td>Nom du fournisseur</td>
+                            </tr>
+                            <tr>
+                              <td>Reference</td>
+                              <td>String</td>
+                              <td>Oui</td>
+                              <td>Référence unique de la transaction</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card card-code mb-4">
+                      <div class="content-card d-flex">
+                        <p class="text-white">Afficher le code ici</p>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <ul
+                        class="nav nav-tabs nav-white reverse mb-3"
+                        id="myTab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="pane-1"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-1"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-1"
+                            aria-selected="true"
+                          >
+                            Paramètres de la reponse
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-2"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-2"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-2"
+                            aria-selected="false"
+                          >
+                            Reponse en cas d'erreur
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="tab-pane-1"
+                        role="tabpanel"
+                        aria-labelledby="pane-1"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-4">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="tab-pane-2"
+                        role="tabpanel"
+                        aria-labelledby="pane-2"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-4">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <ul
+                        class="nav nav-tabs nav-white reverse mb-3"
+                        id="myTab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="pane-3"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-python"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-python"
+                            aria-selected="true"
+                          >
+                            Python
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-4"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-php"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-php"
+                            aria-selected="false"
+                          >
+                            PHP
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-5"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-java"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-java"
+                            aria-selected="false"
+                          >
+                            Java
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-6"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-javascript"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-javascript"
+                            aria-selected="false"
+                          >
+                            Javascript
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-7"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-go"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-go"
+                            aria-selected="false"
+                          >
+                            Go
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-8"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-typeScript"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-typeScript"
+                            aria-selected="false"
+                          >
+                            TypeScript
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-9"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-spring"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-spring"
+                            aria-selected="false"
+                          >
+                            Spring
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-10"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-flutter"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-flutter"
+                            aria-selected="false"
+                          >
+                            Flutter
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="tab-pane-python"
+                        role="tabpanel"
+                        aria-labelledby="pane-3"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-3">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="tab-pane-php"
+                        role="tabpanel"
+                        aria-labelledby="pane-4"
+                        tabindex="0"
+                      >
+                        <p class="text sm">Paramètres de la requête (POST)</p>
+                        <div class="card card-dash lg mb-3">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Nom</th>
+                                  <th>Type</th>
+                                  <th>Obligation</th>
+                                  <th>Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Token</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Token d'authentification</td>
+                                </tr>
+                                <tr>
+                                  <td>Provider</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Nom du fournisseur</td>
+                                </tr>
+                                <tr>
+                                  <td>Reference</td>
+                                  <td>String</td>
+                                  <td>Oui</td>
+                                  <td>Référence unique de la transaction</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="card card-code mb-3">
+                          <div class="content-card d-flex">
+                            <p class="text-white">Afficher le code ici</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

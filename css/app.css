@@ -816,6 +816,13 @@ hr {
   color: var(--colorTitre);
   background: var(--bgCard);
 }
+.nav-white.reverse {
+  background: var(--bgCard);
+}
+.nav-white.reverse .nav-link.active {
+  color: var(--colorTitre);
+  background: var(--bgBtnLight);
+}
 
 .form-control {
   border-radius: var(--borderRadius-8);
