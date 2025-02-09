@@ -18,7 +18,9 @@
               <div class="container-fluid px-lg-3 px-lg-3 px-xxl-4">
                 <div class="row g-lg-3 g-1 align-items-center">
                   <div class="col-lg-8">
-                    <div class="d-flex align-items-center gap-lg-3 gap-xxl-5  gap-3">
+                    <div
+                      class="d-flex align-items-center gap-lg-2 gap-xxl-5 gap-3"
+                    >
                       <a
                         href="index.html"
                         class="logo-app d-flex align-items-center gap-2"
@@ -32,9 +34,11 @@
                         class="collapse navbar-collapse"
                         id="navbarSupportedContent"
                       >
-                        <ul class="navbar-nav ms-lg-5 mb-0 mb-lg-0 gap-lg-4">
+                        <ul
+                          class="navbar-nav ms-lg-3 ms-xl-4 mb-0 mb-lg-0 gap-lg-3"
+                        >
                           <li class="nav-item">
-                            <a class="nav-link " href="index.html">
+                            <a class="nav-link" href="index.html">
                               Tableau de bord
                               <div
                                 class="icon-arrow d-flex align-items-center ms-2"
@@ -77,10 +81,14 @@
                             </div>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="payements.html">Payements </a>
+                            <a class="nav-link active" href="payements.html"
+                              >Payements
+                            </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="documentation.html">Documentation</a>
+                            <a class="nav-link" href="documentation.html"
+                              >Documentation</a
+                            >
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#">Paramètres </a>
@@ -98,7 +106,11 @@
                       >
                         <span class="ms-1">Aucun projet</span>
                         <span>|</span>
-                        <a href="#" class="btn-add-project tooltip-hover" data-position-tooltip="bottom">
+                        <a
+                          href="#"
+                          class="btn-add-project tooltip-hover"
+                          data-position-tooltip="bottom"
+                        >
                           <i class="fi fi-rr-plus"></i>
                           <span class="tooltip-indicator">
                             Nouveau projet
@@ -121,7 +133,10 @@
                           </label>
                         </div>
                       </div>
-                      <a href="#" class="link-icon d-flex align-items-center justify-content-center">
+                      <a
+                        href="#"
+                        class="link-icon d-flex align-items-center justify-content-center"
+                      >
                         <i class="fi fi-rr-bell-ring"></i>
                       </a>
                       <div class="dropdown">
@@ -190,19 +205,73 @@
         <div class="content-page flex-grow-1 pb-lg-4 pb-3">
           <div class="block-page mt-lg-4">
             <div class="container-fluid px-lg-3 px-lg-3 px-xxl-4">
-              <div class="row g-lg-3 g-xxl-4 g-2 ">
-                <div class="col-lg-10 col-xxl-10 mx-auto">
+              <div class="row g-lg-3 g-xxl-4 g-2">
+                <div class="col-lg-12 col-xxl-11 mx-auto">
+                  <h1 class="text fnt-18 mb-lg-3">Payements</h1>
                   <div class="card card-dash lg">
                     <div class="row g-lg-3 g-2 align-items-center">
-                      <div class="col-lg-8">
+                      <div class="col-lg-3">
                         <h4 class="text mb-0">Payement recents</h4>
                         <p class="mb-0 text sm muted">
                           You made 2 sales this month
                         </p>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="d-flex align-items-center gap-lg-2 gap-1">
-                          
+                      <div class="col-lg-9">
+                        <div
+                          class="block-filter-table d-flex align-items-center row g-2"
+                        >
+                          <div class="col-lg-3">
+                            <label class="label-input muted">Recherche</label>
+                            <div class="input-group">
+                              <input
+                                class="input-form form-control form-control form-border sm"
+                                placeholder="Recherche..."
+                                type="text"
+                              />
+                              <div class="icon">
+                                <i class="fi fi-rr-search"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <label class="label-input muted">Filtre</label>
+                            <div class="input-group">
+                              <input
+                                class="input-form form-control form-border sm"
+                                placeholder="Filtre..."
+                                type="text"
+                              />
+                              <div class="icon">
+                                <i class="fi fi-rr-filter"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <label class="label-input muted">Du</label>
+                            <div class="input-group">
+                              <input
+                                class="input-form form-control form-border sm"
+                                placeholder="Recherche..."
+                                type="date"
+                              />
+                              <div class="icon">
+                                <i class="fi fi-rr-calendar"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <label class="label-input muted">Au</label>
+                            <div class="input-group">
+                              <input
+                                class="input-form form-control form-border sm"
+                                placeholder="Recherche..."
+                                type="date"
+                              />
+                              <div class="icon">
+                                <i class="fi fi-rr-calendar"></i>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -245,7 +314,10 @@
                             </td>
                             <td>
                               <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-table tooltip-hover" data-position-tooltip="top">
+                                <button
+                                  class="btn btn-table tooltip-hover"
+                                  data-position-tooltip="top"
+                                >
                                   <i class="fi fi-rr-trash"></i>
                                   <span class="tooltip-indicator sm">
                                     Supprimer
@@ -280,7 +352,10 @@
                             </td>
                             <td>
                               <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-table tooltip-hover" data-position-tooltip="top">
+                                <button
+                                  class="btn btn-table tooltip-hover"
+                                  data-position-tooltip="top"
+                                >
                                   <i class="fi fi-rr-trash"></i>
                                   <span class="tooltip-indicator sm">
                                     Supprimer
@@ -315,7 +390,10 @@
                             </td>
                             <td>
                               <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-table tooltip-hover" data-position-tooltip="top">
+                                <button
+                                  class="btn btn-table tooltip-hover"
+                                  data-position-tooltip="top"
+                                >
                                   <i class="fi fi-rr-trash"></i>
                                   <span class="tooltip-indicator sm">
                                     Supprimer
@@ -350,7 +428,10 @@
                             </td>
                             <td>
                               <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-table tooltip-hover" data-position-tooltip="top">
+                                <button
+                                  class="btn btn-table tooltip-hover"
+                                  data-position-tooltip="top"
+                                >
                                   <i class="fi fi-rr-trash"></i>
                                   <span class="tooltip-indicator sm">
                                     Supprimer

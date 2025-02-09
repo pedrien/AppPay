@@ -18,7 +18,7 @@
               <div class="container-fluid px-lg-3 px-lg-3 px-xxl-4">
                 <div class="row g-lg-3 g-1 align-items-center">
                   <div class="col-lg-8">
-                    <div class="d-flex align-items-center gap-lg-3 gap-xxl-5  gap-3">
+                    <div class="d-flex align-items-center gap-lg-2 gap-xxl-5  gap-3">
                       <a
                         href="index.html"
                         class="logo-app d-flex align-items-center gap-2"
@@ -32,7 +32,7 @@
                         class="collapse navbar-collapse"
                         id="navbarSupportedContent"
                       >
-                        <ul class="navbar-nav ms-lg-5 mb-0 mb-lg-0 gap-lg-3">
+                        <ul class="navbar-nav ms-lg-3 ms-xl-4 mb-0 mb-lg-0 gap-lg-3">
                           <li class="nav-item">
                             <a class="nav-link active" href="index.html">
                               Tableau de bord
@@ -96,10 +96,47 @@
                       <div
                         class="block-show-name-project d-flex align-items-center gap-2"
                       >
-                        <span class="ms-1">Aucun projet</span>
+                        <div class="dropdown">
+                         <div class="cursor-pointer d-flex align-items-center gap-1" data-bs-toggle="dropdown"
+                         aria-expanded="false">
+                          <span class="ms-1">Christelle du Robin</span>
+                          <i class="fi fi-rr-angle-down icon-arrow"></i>
+                         </div>
+                          <ul class="dropdown-menu dropdown-menu-end lg">
+                            <div class="d-flex align-items-center gap-2">
+                              <h6 class="text sm">Projets</h6>
+                            </div>
+                            <hr class="my-2" />
+                            <li class="mb-1">
+                              <a
+                                class="dropdown-item d-flex align-items-center gap-2 active"
+                                href="#"
+                              >
+                                Christelle du Robin
+                              </a>
+                            </li>
+                            <li class="mb-1">
+                              <a
+                                class="dropdown-item d-flex align-items-center gap-2"
+                                href="#"
+                              >
+                                Christelle du Robin
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                         <span>|</span>
-                        <a href="#" class="btn-add-project" data-bs-toggle="modal" data-bs-target="#modalNewProject">
+                        <a
+                          href="#"
+                          class="btn-add-project tooltip-hover"
+                          data-position-tooltip="bottom"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalNewProject"
+                        >
                           <i class="fi fi-rr-plus"></i>
+                          <span class="tooltip-indicator">
+                            Nouveau projet
+                          </span>
                         </a>
                       </div>
                       <div class="toggle-theme">

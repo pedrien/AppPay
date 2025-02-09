@@ -158,6 +158,10 @@ a {
   line-height: inherit;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .avatar {
   width: 32px;
   height: 32px;
@@ -898,6 +902,24 @@ hr {
   color: var(--primaryColor);
 }
 
+.block-filter-table .input-group {
+  align-items: center;
+}
+.block-filter-table .input-group .icon {
+  position: absolute;
+  color: var(--colorParagraph);
+  font-size: var(--fnt-13);
+  left: 10px;
+  transition: var(--transition-3);
+}
+.block-filter-table .input-group .form-control {
+  border-radius: var(--borderRadius-8) !important;
+  padding-left: 28px;
+}
+.block-filter-table .input-group .form-control:focus + .icon {
+  color: var(--primaryColor);
+}
+
 .nav-white {
   padding: 6px;
   background: var(--bgFond);
@@ -962,6 +984,10 @@ footer {
 
 .label-input {
   font-size: var(--fnt-12);
+}
+
+.muted {
+  color: var(--colorMuted);
 }
 
 .block-login {
