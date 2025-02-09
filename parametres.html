@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>UnoPay - Documentation</title>
+  </head>
+  <body>
+    <div class="global-div">
+      <div class="wrapper d-flex flex-column">
+        <header class="sticky-top">
+          <nav class="navbar navbar-expand-lg">
+            <div class="content-nav w-100">
+              <div class="container-fluid px-lg-3 px-lg-3 px-xxl-4">
+                <div class="row g-lg-3 g-1 align-items-center">
+                  <div class="col-lg-8">
+                    <div
+                      class="d-flex align-items-center gap-lg-3 gap-xxl-5 gap-3"
+                    >
+                      <a
+                        href="index.html"
+                        class="logo-app d-flex align-items-center gap-2"
+                      >
+                        <div class="icon">
+                          <span class="ms-1"></span>
+                        </div>
+                        UnoPay
+                      </a>
+                      <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                      >
+                        <ul class="navbar-nav ms-lg-5 mb-0 mb-lg-0 gap-lg-3">
+                          <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                              Tableau de bord
+                              <div
+                                class="icon-arrow d-flex align-items-center ms-2"
+                              >
+                                <i class="fi fi-rr-angle-down icon-arrow"></i>
+                              </div>
+                            </a>
+                            <div class="dropdown">
+                              <div class="content-dropdown">
+                                <ul class="mb-0 ps-0">
+                                  <li>
+                                    <a
+                                      href="#"
+                                      class="d-inline-flex align-items-center gap-2 active"
+                                    >
+                                      <i class="fi fi-rr-apps"></i>
+                                      Overwiew
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      href="#"
+                                      class="d-inline-flex align-items-center gap-2"
+                                    >
+                                      <i class="fi fi-rr-chart-area"></i>
+                                      Analyse
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      href="#"
+                                      class="d-inline-flex align-items-center gap-2"
+                                    >
+                                      <i class="fi fi-rr-bell"></i>
+                                      Notifications
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="payements.html"
+                              >Payements
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="documentation.html"
+                              >Documentation</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Paramètres </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div
+                      class="d-flex align-items-center justify-content-end gap-lg-3"
+                    >
+                      <div
+                        class="block-show-name-project d-flex align-items-center gap-2"
+                      >
+                        <span class="ms-1">Aucun projet</span>
+                        <span>|</span>
+                        <a
+                          href="#"
+                          class="btn-add-project tooltip-hover"
+                          data-position-tooltip="bottom"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalNewProject"
+                        >
+                          <i class="fi fi-rr-plus"></i>
+                          <span class="tooltip-indicator">
+                            Nouveau projet
+                          </span>
+                        </a>
+                      </div>
+                      <div class="toggle-theme">
+                        <div class="content-theme d-flex align-items-center">
+                          <input
+                            type="checkbox"
+                            id="checkTheme"
+                            name="theme"
+                            class="d-none"
+                          />
+                          <label for="checkTheme" class="label-theme">
+                            <div class="bubble-icon">
+                              <i class="fi fi-rr-sun"></i>
+                              <i class="fi fi-rr-moon-stars"></i>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <a
+                        href="#"
+                        class="link-icon d-flex align-items-center justify-content-center"
+                      >
+                        <i class="fi fi-rr-bell-ring"></i>
+                      </a>
+                      <div class="dropdown">
+                        <div
+                          class="block-avatar-user-connected d-flex align-items-center gap-2"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <div class="avatar">
+                            <div class="icon-avatar">P</div>
+                            <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                          </div>
+                          <i class="fi fi-rr-angle-down icon-arrow"></i>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end lg">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar">
+                              <div class="icon-avatar">P</div>
+                              <!-- <img src="images/avatars/avatar.jpg" alt="avatar"> -->
+                            </div>
+                            <div class="info-user">
+                              <h6 class="mb-0 text sm">Pedrien Kinkani</h6>
+                              <p class="text sm muted mb-0">Super admin</p>
+                            </div>
+                          </div>
+
+                          <hr class="my-2" />
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center gap-2"
+                              href="/profil"
+                            >
+                              <i class="fi fi-rr-user"></i>
+                              Profil
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center gap-2"
+                              href="/parametres"
+                            >
+                              <i class="fi fi-rr-settings"></i>
+                              Parametres
+                            </a>
+                          </li>
+                          <li class="li-border">
+                            <a
+                              class="dropdown-item d-flex align-items-center gap-2"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modalDeconnexion"
+                            >
+                              <i class="fi fi-rr-sign-out-alt"></i>
+                              Deconnexion
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="content-page flex-grow-1 pb-lg-4 pb-3">
+          <div class="block-page mt-lg-4">
+            <div class="container-fluid px-lg-3 px-lg-3 px-xxl-4">
+              <div class="row g-lg-3 g-xxl-4 g-2">
+                <div class="col-lg-4 col-xl-3">
+                  <div class="block-sidebar d-flex flex-column">
+                    <div class="header py-0">
+                      <h4 class="text mb-0">Paramètres</h4>
+                      <hr />
+                    </div>
+                    <div class="body flex-grow-1 pt-0">
+                      <ul class="list">
+                        <li>
+                          <a href="parametres.html" class="active"> Compte</a>
+                        </li>
+                        <li>
+                          <a href="parametre-projet.html"> Projet</a>
+                        </li>
+                        <li>
+                          <a href="parametre-notification.html"> Notifications </a>
+                        </li>
+                        <li>
+                          <a href="parametre-theme.html"> Thèmes </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-xl-9">
+                  <div class="col-lg-11 col-xl-10 mx-auto">
+                    <h1 class="text fnt-18">Paramètres - Compte</h1>
+                    <p class="text sm muted">
+                      Mettre à jour les paramètres de votre compte.
+                      Définissez votre langue et votre fuseau horaire.
+                    </p>
+                    <div class="d-flex">
+                      <ul
+                        class="nav nav-tabs nav-white reverse mb-3"
+                        id="myTab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="pane-1"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-1"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-1"
+                            aria-selected="true"
+                          >
+                            Informations du compte
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pane-2"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-pane-2"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab-pane-2"
+                            aria-selected="false"
+                          >
+                            Mot de passe et sécurité
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="tab-pane-1"
+                        role="tabpanel"
+                        aria-labelledby="pane-1"
+                        tabindex="0"
+                      >
+                        <h1 class="text mb-lg-3">Informations du compte</h1>
+                        <div class="row g-lg-3 g-2">
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-3 g-2 align-items-center">
+                                <div class="col-lg-4 col-md-5">
+                                  <h6 class="text sm">Nom</h6>
+                                  <p class="text muted xm">
+                                    C'est le nom qui sera affiché sur votre
+                                    profil et dans les emails.
+                                  </p>
+                                </div>
+                                <div class="col-lg-8 cl-md-7">
+                                  <input
+                                    type="text"
+                                    class="form-control form-border lg"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-3 g-2 align-items-center">
+                                <div class="col-lg-4 col-md-5">
+                                  <h6 class="text sm">Téléphone</h6>
+                                  <p class="text muted xm">
+                                    C'est le numéro de téléphone qui sera
+                                    utilisé pour vous contacter.
+                                  </p>
+                                </div>
+                                <div class="col-lg-8 cl-md-7">
+                                  <input
+                                    type="text"
+                                    class="form-control form-border lg"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-3 g-2 align-items-center">
+                                <div class="col-lg-4 col-md-5">
+                                  <h6 class="text sm">Email</h6>
+                                  <p class="text muted xm">
+                                    C'est l'adresse email qui sera utilisé pour
+                                    vous contacter.
+                                  </p>
+                                </div>
+                                <div class="col-lg-8 cl-md-7">
+                                  <input
+                                    type="email"
+                                    class="form-control form-border lg"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-5 g-2 align-items-center">
+                                <div class="col-lg-8 cl-md-7">
+                                  <h6 class="text sm">Avatar</h6>
+                                  <div class="block-upload-file">
+                                    <label for="" class="dashed">
+                                      <p
+                                        class="mb-0 d-flex flex-column align-items-center text-center"
+                                      >
+                                        <i
+                                          class="fi fi-rr-upload icon-upload mb-1"
+                                        ></i>
+                                        <span
+                                          >Téléchargez une image pour la
+                                          vignette de votre avatar
+                                          (PNG,JPEG,WEBP)</span
+                                        >
+                                      </p>
+                                    </label>
+                                    <input
+                                      class="d-none"
+                                      type="file"
+                                      id="id"
+                                      accept="image/*"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-lg-4 col-md-5">
+                                  <div class="avatar lg">
+                                    <div class="icon-avatar">P</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div
+                              class="d-flex col-lg-4 col-md-4 col-xl-3 ms-auto align-items-center gap-2 justify-content-end my-2"
+                            >
+                              <button class="btn btn-default btn-primary w-100">
+                                Mettre à jour
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="tab-pane-2"
+                        role="tabpanel"
+                        aria-labelledby="pane-2"
+                        tabindex="0"
+                      >
+                        <h1 class="text mb-lg-3">Mot de passe et sécurité</h1>
+                        <div class="row g-lg-3 g-2">
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-3 g-2 align-items-center">
+                                <div class="col-lg-4 col-md-5">
+                                  <h6 class="text sm">Mot de passe actuel</h6>
+                                  <p class="text muted xm">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ex architecto illo!
+                                  </p>
+                                </div>
+                                <div class="col-lg-8 cl-md-7">
+                                  <input
+                                    type="password"
+                                    class="form-control form-border lg"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-3 g-2 align-items-center">
+                                <div class="col-lg-4 col-md-5">
+                                  <h6 class="text sm">Nouveau mot de passe</h6>
+                                  <p class="text muted xm">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore pariatur quos deleniti.
+                                  </p>
+                                </div>
+                                <div class="col-lg-8 cl-md-7">
+                                  <input
+                                    type="password"
+                                    class="form-control form-border lg"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-3 g-2 align-items-center">
+                                <div class="col-lg-4 col-md-5">
+                                  <h6 class="text sm">Confirmer le mot de passe</h6>
+                                  <p class="text muted xm">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi perferendis mollitia quidem!
+                                  </p>
+                                </div>
+                                <div class="col-lg-8 cl-md-7">
+                                  <input
+                                    type="email"
+                                    class="form-control form-border lg"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div
+                              class="d-flex col-lg-4 col-md-4 col-xl-3 ms-auto align-items-center gap-2 justify-content-end my-2"
+                            >
+                              <button class="btn btn-default btn-primary w-100">
+                                Enregistrer
+                              </button>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="card card-dash lg">
+                              <div class="row g-lg-3 g-2 align-items-center">
+                                <div class="col-12">
+                                  <h6 class="text sm">Supprimer le compte</h6>
+                                  <p class="text muted xm">
+                                   Une fois que votre compte est supprimé, vous ne pourrez pas le récupérer. Voulez-vous vraiment supprimer votre compte?
+                                  </p>
+                                  <button class="btn btn-defaut btn-danger">
+                                    Supprimer le compte
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="container-fluid px-lg-3 px-xxl-4">
+            <div class="row">
+              <div class="col-12">
+                <div class="text-center">
+                  <p class="text sm muted mb-0">
+                    &copy; 2025 UnoPay. All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="modal fade modal-lg" id="modalNewProject" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title mb-0">Créer un projet</h5>
+            <button
+              type="button"
+              class="btn-close tooltip-hover"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              data-position-tooltip="right"
+            >
+              <i class="fi fi-rr-cross"></i>
+              <div class="tooltip-indicator">Fermer</div>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row g-lg-4 g-3">
+                <div class="col-lg-4">
+                  <ul class="list-indicator d-flex flex-lg-column">
+                    <li class="active">Informations</li>
+                    <li>Détails</li>
+                    <li>Configuration</li>
+                    <li>Finalisation</li>
+                  </ul>
+                </div>
+                <div class="col-lg-8">
+                  <div class="col-lg-10 mx-auto">
+                    <div id="info">
+                      <h5 class="text fnt-18">Informations</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Nom
+                            <span class="text muted xm"
+                              >(Nom de votre projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Nom d'affichage
+                            <span class="text muted xm"
+                              >(Nom d'affichage de votre projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="details">
+                      <h5 class="text fnt-18">Détails</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Description
+                            <span class="text muted xm"
+                              >(Une brève description de votre projet)</span
+                            ></label
+                          >
+                          <textarea
+                            name="descr"
+                            rows="3"
+                            id="descr"
+                            class="form-control form-border"
+                          ></textarea>
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2">
+                            Vignette
+                          </label>
+                          <div class="block-upload-file">
+                            <label for="" class="dashed">
+                              <p
+                                class="mb-0 d-flex flex-column align-items-center text-center"
+                              >
+                                <i class="fi fi-rr-upload icon-upload mb-1"></i>
+                                <span
+                                  >Téléchargez une image pour la vignette de
+                                  votre projet (PNG,JPEG,WEBP)</span
+                                >
+                              </p>
+                            </label>
+                            <input
+                              class="d-none"
+                              type="file"
+                              id="id"
+                              accept="image/*"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                            <button class="btn btn-default btn-light w-50">
+                              Précédent
+                            </button>
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="configuration">
+                      <h5 class="text fnt-18">Configuration</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >URL de rappel
+                            <span class="text muted xm"
+                              >(URL pour le rappel (Callback) du projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="https://exemple.com/callback"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >IP du serveur
+                            <span class="text muted xm"
+                              >(L'adresse IP de votre serveur)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="192.168.1.1"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Nom de domaine
+                            <span class="text muted xm"
+                              >(Nom de domaine de votre projet)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="https://exemple.com"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                            <button class="btn btn-default btn-light w-50">
+                              Précédent
+                            </button>
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="finalisation">
+                      <h5 class="text fnt-18">Finalisation</h5>
+                      <div class="form-group row g-2 g-lg-2">
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Plan
+                          </label>
+                          <div class="row g-lg-3 g-2">
+                            <div class="col-lg-6">
+                              <div class="card card-plan-sm">
+                                <input
+                                  type="radio"
+                                  class="radio"
+                                  name="radio-plan"
+                                  id="plan-1"
+                                />
+                                <div class="content-card">
+                                  <div
+                                    class="fake-radio d-flex align-items-center justify-content-center"
+                                  >
+                                    <i class="fi fi-rr-check"></i>
+                                  </div>
+                                  <h4 class="text mb-lg-4">Standar</h4>
+                                  <div class="d-flex flex-column">
+                                    <h5 class="text fnt-18 mb-1">$25</h5>
+                                    <p class="text muted xm mb-0">60000CFD</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="card card-plan-sm">
+                                <input
+                                  type="radio"
+                                  class="radio"
+                                  name="radio-plan"
+                                  id="plan-2"
+                                />
+                                <div class="content-card">
+                                  <div
+                                    class="fake-radio d-flex align-items-center justify-content-center"
+                                  >
+                                    <i class="fi fi-rr-check"></i>
+                                  </div>
+                                  <h4 class="text mb-lg-4">Standar</h4>
+                                  <div class="d-flex flex-column">
+                                    <h5 class="text fnt-18 mb-1">60000CFD</h5>
+                                    <p class="text muted xm mb-0">$25</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Fournisseur
+                          </label>
+                          <select
+                            name=""
+                            id=""
+                            class="form-control form-select lg form-border"
+                          >
+                            <option value="" selected disabled>
+                              Choisir un fournisseur
+                            </option>
+                          </select>
+                        </div>
+
+                        <div class="col-12">
+                          <label for="" class="label-input black mb-2"
+                            >Numéro de téléphone
+                            <span class="text muted xm"
+                              >(Votre numéro de téléphone)</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control lg form-border"
+                            placeholder="https://exemple.com"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <div
+                            class="d-flex align-items-center gap-2 justify-content-end my-2"
+                          >
+                            <button class="btn btn-default btn-light w-50">
+                              Précédent
+                            </button>
+                            <button class="btn btn-default btn-primary w-50">
+                              Suivant
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script>
+      var options = {
+        series: [
+          {
+            name: "Mpesa",
+            data: [31, 40, 28, 51, 42, 109, 100, 38, 55, 77, 90, 102],
+          },
+          {
+            name: "OrangeMoney",
+            data: [20, 23, 68, 71, 92, 110, 50, 38, 25, 97, 170, 180],
+          },
+
+          {
+            name: "AirtelMoney",
+            data: [20, 203, 28, 67, 45, 40, 50, 38, 65, 97, 200, 180],
+          },
+
+          {
+            name: "AfriMoney",
+            data: [100, 3, 18, 287, 45, 18, 500, 108, 65, 57, 150, 380],
+          },
+        ],
+        colors: ["#92bf7f", "#f5a870", "#f1686d", "#bf64a2"],
+        chart: {
+          height: 350,
+          type: "area",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: "smooth",
+        },
+        xaxis: {
+          //   type: 'datetime',
+          categories: [
+            "Janv",
+            "Fev",
+            "Mars",
+            "Avril",
+            "Mai",
+            "Juin",
+            "Juil",
+            "Aout",
+            "Sept",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ["transparent"],
+        },
+      };
+
+      var chart1 = new ApexCharts(
+        document.querySelector("#kt_apexcharts_1"),
+        options
+      );
+      chart1.render();
+
+      var options = {
+        series: [17, 15, 26, 34],
+        chart: {
+          type: "donut",
+          height: window.innerWidth < 768 ? 250 : 300,
+        },
+        // stroke: {
+        //   lineCap: "round",
+        // },
+        labels: [
+          "P. Morales",
+          "G.P. Morales",
+          "P. Physique",
+          "G.P. Physiques",
+          "Immobilières",
+        ],
+        legend: {
+          position: window.innerWidth < 768 ? "bottom" : "right", // Déplace la légende
+          show: false,
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          lineCap: "round",
+          curve: "smooth",
+        }, // Labels pour chaque partie du donut
+        colors: ["#44b6a1", "#df5656", "#dfa356", "#f8f8f8"], // Bleu pour actifs, rouge pour inactifs
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+
+        plotOptions: {
+          pie: {
+            donut: {
+              size: "88%", // Diminuer l'épaisseur du donut
+            },
+          },
+        },
+      };
+
+      var chart2 = new ApexCharts(
+        document.querySelector("#kt_apexcharts_2"),
+        options
+      );
+      chart2.render();
+    </script>
+  </body>
+</html>
