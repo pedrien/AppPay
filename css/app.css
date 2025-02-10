@@ -945,6 +945,7 @@ hr {
 .nav-white .nav-link.active {
   color: var(--colorTitre);
   background: var(--bgCard);
+  font-weight: var(--fw-500);
 }
 .nav-white.reverse {
   background: var(--bgCard);
