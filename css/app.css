@@ -114,6 +114,29 @@ body {
   right: 160%;
 }
 
+.card-info-pay {
+  border: none;
+  background: var(--bgFond);
+  border-radius: 8px;
+  padding: 14px;
+}
+.card-info-pay span {
+  font-size: 14px;
+  color: var(--colorMuted);
+  flex: none;
+}
+.card-info-pay h5 {
+  color: var(--colorTitre);
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600;
+  flex: none;
+}
+.card-info-pay hr {
+  border-top: 1px dashed var(--colorTitre);
+  opacity: 0.5;
+}
+
 .btn {
   font-size: var(--fnt-14);
   border-radius: var(--borderRadius-8);
@@ -998,6 +1021,24 @@ footer {
 .block-login .block-bg-login {
   min-height: 100vh;
   padding: 10px;
+}
+.block-login .block-info-app .avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--colorTitre);
+  color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.block-login .block-info-app h6 {
+  font-weight: 600;
+  color: var(--colorTitre);
+}
+.block-login .block-info-app p {
+  color: var(--colorMuted);
+  font-size: 14px;
 }
 .block-login .content-bg {
   width: 100%;

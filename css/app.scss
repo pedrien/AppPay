@@ -142,6 +142,29 @@ body {
   }
 }
 
+.card-info-pay {
+  border: none;
+  background: var(--bgFond);
+  border-radius: 8px;
+  padding: 14px;
+  span {
+    font-size: 14px;
+    color: var(--colorMuted);
+    flex: none;
+  }
+  h5 {
+    color: var(--colorTitre);
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+    flex: none;
+  }
+  hr {
+    border-top: 1px dashed var(--colorTitre);
+    opacity: .5;
+  }
+}
+
 .btn {
   font-size: var(--fnt-14);
   border-radius: var(--borderRadius-8);
@@ -1180,6 +1203,28 @@ footer {
   .block-bg-login {
     min-height: 100vh;
     padding: 10px;
+  }
+  .block-info-app {
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--colorTitre);
+      color: var(--whiteColor);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+
+    h6 {
+      font-weight: 600;
+      color: var(--colorTitre);
+    }
+    p {
+      color: var(--colorMuted);
+      font-size: 14px;
+    }
+
   }
   .content-bg {
     width: 100%;
